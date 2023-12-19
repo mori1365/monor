@@ -163,4 +163,7 @@ header.sticky {
         opacity: 1;
         transition-delay: calc(.15s * var(--i));
     }
+    .image{
+        width: 20px;
+    }
 }
