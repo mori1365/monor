@@ -18,15 +18,15 @@ window.onscroll = () => {
 
 let op = document.getElementById('op');
 let cl = document.getElementById('cl');
-let aks = document.querySelector(".aks");
+let img = document.querySelector(".img");
 
 op.onclick = () => {
     op.style.display= 'none';
-    aks.style.width = "400px";
+    img.style.right = "0";
     cl.style.display= 'block';
 }
 cl.onclick = () => {
     op.style.display= 'block';
-    aks.style.width = "0";
+    img.style.right = "100%";
     cl.style.display= 'none';
 }
