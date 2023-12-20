@@ -166,4 +166,7 @@ header.sticky {
     .image{
         width: 20px;
     }
+    .img{
+        width:300px;
+    }
 }
