@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>بازکردن و بستن آی‌فریم</title>
+    <style>
+iframe{
+    width: 100%;
+    display: none;
+}
+button{
+    width: 30%;
+    color: aliceblue;
+    background-color: blue;
+    cursor: pointer;
+}
+    </style>
+    
+</head>
+<body>
+    <button onclick="openIframe('table.html')">باز کردن آی‌فریم</button>
+    <button onclick="openIframe('betters.html')">باز کردن erم</button>
+    <button onclick="closeIframe()">بستن آی‌فریم</button>
+
+    <iframe id="myFrame" width="100%" height="850"></iframe>
+
+    <script>
+        var iframe = document.getElementById('myFrame');
+
+        function openIframe(url) {
+            iframe.src = url;
+            iframe.style.display = "block";
+        }
+
+        function closeIframe() {
+            iframe.src = '';
+            iframe.style.display = "none";
+        }
+    </script>
+</body>
+</html>

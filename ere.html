@@ -1,61 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
-    #fullscreen {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      z-index: 9999;
-    }
-    
-    #fullscreen iframe {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%;
-      height: 80%;
-    }
-    
-    #fullscreen .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      color: #fff;
-      font-size: 24px;
+    button{
       cursor: pointer;
+    }
+    .fram {
+      width: 95%;
+      height: 0;
+      transition: all 0.8s ea;
     }
   </style>
 </head>
 <body>
-  <button onclick="openFullscreen('https://example.com')">باز کردن صفحه به صورت تمام صفحه</button>
-
-  <div id="fullscreen">
-    <span class="close-btn" onclick="closeFullscreen()">&times;</span>
-    <iframe src=""></iframe>
-  </div>
-
+  <button onclick="toggleFullScreen()">table</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
+  <button>5</button>
+  <iframe src="./table.html" frameborder="0" class="fram"></iframe>
+  
   <script>
-    function openFullscreen(url) {
-      var fullscreenDiv = document.getElementById("fullscreen");
-      var iframe = fullscreenDiv.querySelector("iframe");
-      
-      iframe.src = url;
-      fullscreenDiv.style.display = "block";
+    
+    function toggleFullScreen(){
+      var fram = document.querySelector(".fram");
+      if (fram.style.height === "0px") {
+            fram.style.height = "900px";
+        } else {
+            fram.style.height = "0px";
+        }
     }
     
-    function closeFullscreen() {
-      var fullscreenDiv = document.getElementById("fullscreen");
-      var iframe = fullscreenDiv.querySelector("iframe");
-      
-      iframe.src = "";
-      fullscreenDiv.style.display = "none";
-    }
+    
   </script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>بازکردن و بستن آی‌فریم از راست</title>
+</head>
+<body>
+    <button onclick="openIframe('table.html')" style="float: right;">باز کردن آی‌فریم</button>
+    <button onclick="closeIframe()" style="float: left;">بستن آی‌فریم</button>
+
+    <iframe id="myFrame" style="width: 100%; height: 400px;transition: all 0.5s; border: none; display: none;" sandbox="allow-same-origin allow-scripts"></iframe>
+
+    <script>
+        var iframe = document.getElementById('myFrame');
+
+        function openIframe(url) {
+            iframe.src = url;
+            iframe.style.display = 'block';
+        }
+
+        function closeIframe() {
+            iframe.src = '';
+            iframe.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
