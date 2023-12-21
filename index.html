@@ -25,26 +25,16 @@
         </nav>
     </header>
     <div class="baner">
-
     </div>
     <div class="master">
-        <img src="./pic/IMG-20231214-WA0003.jpg" alt="" class="image">
-        <img src="./pic/IMG_20231214_121935_817.jpg" alt="" class="image">
-        <img src="./pic/IMG_20231214_122106_227.jpg" alt="" class="image">
-        <img src="./pic/IMG_20231214_122152_490.jpg" alt="" class="image">
-        <img src="./pic/IMG_20231214_122349_534.jpg" alt="" class="image">
-        <img src="./pic/most-headed-goals-in-the-champions-league-1024x715.png" alt="" class="image">
+        <button onclick="openFullscreen('table.html')">جدول لیگ</button>
+    <button onclick="openFullscreen('players record.html')">آمار بازیکنان</button>
+    <button onclick="openFullscreen('betters.html')">بهترین ها</button>
     </div>
-    <div class="makhfi">
-        <div id="op">+</div>
-        <div id="cl">-</div>
-        <div class="aks">
-            <img class="img" src="./pic/Barcelona.png" alt="">
-        </div>
-    </div>
-    <div class="fd">
-        <h1>منم منم کیه کیه</h1>
-    </div>
+    <div class="fullscreen-container" id="fullscreenContainer">
+        <span class="close-btn" onclick="closeFullscreen()">&times;</span>
+        <iframe src=""></iframe>
+      </div>
     <script src="script.js"></script>
 </body>
 </html>

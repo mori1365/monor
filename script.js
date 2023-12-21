@@ -16,17 +16,24 @@ window.onscroll = () => {
     nav.classList.remove('open');
 }
 
-let op = document.getElementById('op');
-let cl = document.getElementById('cl');
-let img = document.querySelector(".img");
 
-op.onclick = () => {
-    op.style.display= 'none';
-    img.style.right = "0";
-    cl.style.display= 'block';
-}
-cl.onclick = () => {
-    op.style.display= 'block';
-    img.style.right = "100%";
-    cl.style.display= 'none';
-}
+
+function openFullscreen(url) {
+    var fullscreenContainer = document.getElementById("fullscreenContainer");
+    var iframe = fullscreenContainer.querySelector("iframe");
+    var closeButton = fullscreenContainer.querySelector(".close-btn");
+    
+    iframe.src = url;
+    fullscreenContainer.style.display = "block";
+    closeButton.style.display = "block";
+  }
+  
+  function closeFullscreen() {
+    var fullscreenContainer = document.getElementById("fullscreenContainer");
+    var iframe = fullscreenContainer.querySelector("iframe");
+    var closeButton = fullscreenContainer.querySelector(".close-btn");
+    
+    iframe.src = "";
+    fullscreenContainer.style.display = "none";
+    closeButton.style.display = "none";
+  }
