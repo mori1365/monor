@@ -21,3 +21,11 @@ window.onscroll = () => {
 var fullcontainer = document.getElementById('fullcontainer');
 var iframe = fullcontainer.querySelector('iframe');
 var closebtn = fullcontainer.querySelector(".closebtn");
+function openfull(url){
+    fullcontainer.style.display="block";
+    iframe.src = url;
+}
+function closebtnfull(){
+    fullcontainer.style.display="none";
+    iframe.src = '';
+}
