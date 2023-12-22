@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,13 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
+
 <body>
     <header>
         <a href="#" class="logo">MASTER</a>
         <div class="icon">
             <i class='bx bx-menu' id="menu"></i>
-            <i class='bx bx-x'  id="x"></i>
+            <i class='bx bx-x' id="x"></i>
         </div>
         <nav class="navbar">
             <a href="#" style="--i:0">HOME</a>
@@ -26,15 +28,19 @@
     </header>
     <div class="baner">
     </div>
-    <div class="master">
-        <button onclick="openFullscreen('table.html')">جدول لیگ</button>
-    <button onclick="openFullscreen('players record.html')">آمار بازیکنان</button>
-    <button onclick="openFullscreen('betters.html')">بهترین ها</button>
-    </div>
-    <div class="fullscreen-container" id="fullscreenContainer">
-        <span class="close-btn" onclick="closeFullscreen()">&times;</span>
-        <iframe src=""></iframe>
-      </div>
+    
+   <div class="master">
+    <button onclick="openfull('table.html')">جدول لیگ</button>
+    <button onclick="openfull('betters.html')">برترین ها</button>
+    <button onclick="openfull('players record.html')">آمار بازیکنان</button>
+    <button onclick="openfull('')">بازیهای باشگاهی</button>
+    <button onclick="openfull('')">بازیهای ملی</button>
+   </div>
+   <div class="fullscreen-container" id="fullcontainer">
+    <iframe src="" frameborder="0"></iframe>
+    <div class="closebtn" onclick="closebtn()">&times;</div>
+   </div>
     <script src="script.js"></script>
 </body>
+
 </html>

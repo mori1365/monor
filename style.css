@@ -20,7 +20,29 @@ header {
     height: 65px;
     transition: all 0.5s ease;
 }
-
+header::before{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+header::after{
+    content: '';
+    top: 0;
+    left: -100%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4),transparent);
+    transition: all 0.5s ease;
+}
+header:hover::after{
+    left: 100%;
+}
 header.sticky {
     background: rgba(0, 0, 0, 0.5);
     padding:20px 10%;
@@ -59,49 +81,45 @@ header.sticky {
 .master{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    gap:10px;
+    gap: 15px;
+    background: gainsboro;
 }
 .master button{
-    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
     color: #fff;
-    background: slateblue;
-    font-size: 20px;
-    font-weight: 700;
-    border: 6px solid brown;
+    font-size: 1.3rem;
+    cursor: pointer;
 }
-.fullscreen-container {
-    display: none;
+.fullscreen-container{
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-  }
-  
-  .fullscreen-container iframe {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
-  }
-  
-  .fullscreen-container.show .close-btn {
-    display: block;
-  }
-  
-  .fullscreen-container .close-btn {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
+    transition: all .4s ease-in-out;
     display: none;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      color: #fff;
-      font-size: 50px;
-      cursor: pointer;
 }
+.fullscreen-container iframe{
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 95%;
+}
+.closebtn{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 50px;
+    color: #fff;
+}
+  
+ 
 
 
 

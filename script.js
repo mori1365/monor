@@ -18,22 +18,6 @@ window.onscroll = () => {
 
 
 
-function openFullscreen(url) {
-    var fullscreenContainer = document.getElementById("fullscreenContainer");
-    var iframe = fullscreenContainer.querySelector("iframe");
-    var closeButton = fullscreenContainer.querySelector(".close-btn");
-    
-    iframe.src = url;
-    fullscreenContainer.style.display = "block";
-    closeButton.style.display = "block";
-  }
-  
-  function closeFullscreen() {
-    var fullscreenContainer = document.getElementById("fullscreenContainer");
-    var iframe = fullscreenContainer.querySelector("iframe");
-    var closeButton = fullscreenContainer.querySelector(".close-btn");
-    
-    iframe.src = "";
-    fullscreenContainer.style.display = "none";
-    closeButton.style.display = "none";
-  }
+var fullcontainer = document.getElementById('fullcontainer');
+var iframe = fullcontainer.querySelector('iframe');
+var closebtn = fullcontainer.querySelector(".closebtn");
